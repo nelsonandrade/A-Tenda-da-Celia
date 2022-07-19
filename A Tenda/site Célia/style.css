@@ -1,0 +1,550 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ 
+a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    opacity: 0.7;
+
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 8px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    font-family:'Pattaya', sans-serif; 
+    background-color: #23232e;
+    height: 8vh;
+    
+}
+
+
+main{
+    background: url("fundo.jpg") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+    margin-top: 10px;
+}
+
+.mobile-menu{
+    cursor: pointer;
+    display: none;
+}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background:#fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width:999px) {
+    body {
+        overflow-x: hidden;
+    }
+.nav-list{
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in;
+}
+.nav-list li{
+    margin-right: 0;
+    
+    }
+     .mobile-menu{
+         display: block;
+     }
+}
+
+
+.nav-list.active{
+    transform: translate(0);
+}
+
+@keyframes navlinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+    
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.container{
+    position: relative;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin-left: 300px;
+}
+
+.container .card{
+    position: relative;
+    max-width: 250px;
+    height: 250px;
+    margin:30px 10px ;
+    padding: 20px 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0,0,0,0.5);
+    transition: 00.3s ease-in-out;
+}
+.container .card:hover{
+    height: 300px;
+}
+.container .card .imgBx{
+    position: relative;
+    width: 200px;
+    height: 250px;
+    top: -30px;
+    left: 25px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.container .card .imgBx img{
+    max-width: 100%;
+    border-radius: 4px;
+    height: 250px;
+    width: 200px;
+}
+.container .card .content{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color:#fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+
+}
+.container .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+/* pagina pulseiras*/
+
+.pulseiras{
+    height: 100%;
+    background:linear-gradient(90deg, #f0b397,#550202);
+    
+}
+.album{
+    width: 1280px;
+    margin:0px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.album .box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    align-items: center;
+    left: 120px;
+
+}
+.album .box .imgBox{
+    position: relative;
+    overflow: hidden;
+}
+.album .box .imgBox img {
+    height: 300px;
+    width: 100%;
+    transition: transform 2s;
+}
+.album .box:hover .imgBox img{
+    transform: scale(1.2);
+}
+.album .box .detalhes{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.5);
+    transform: scaleY(0);
+    transition: transform .5s;
+}
+.album .box:hover .detalhes{
+    transform: scaleY(1);
+}
+.album .box .detalhes .content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
+.album .box .detalhes .content h2{
+    margin: 0;
+    margin: 0;
+    font-size: 20px;
+    color: #ff0;
+}
+.album .box .detalhes .content p{
+    margin: 10px 0 0;
+    padding: 0;
+} 
+.footer{
+    height: 100%;
+    background: linear-gradient(90deg, rgb(126, 81, 81),rgb(175, 33, 33));
+    position: relative;
+}
+.fale-conosco a{
+    text-decoration: none;
+}
+.contato{
+    margin-left: 45px;
+}
+.footer .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.footer .container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem 0.9rem;
+}
+.footer h2{
+    color: #fff;
+}
+.footer p{
+    font-size: 15px;
+    color: beige;
+}
+.footer .sobre-nos{
+    margin-left: 30px;
+}
+.rede-sociais{
+    color: beige;
+    align-items: center;
+}
+.rede-sociais .fa-facebook-f{
+    height: 0px;
+    width: 17px;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0px 2px 0;
+    color: #87ceeb;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.rede-sociais .fa-facebook-f:hover{
+    color: #fff;
+    transform: translateY(-9px);
+}
+.rede-sociais .fa-instagram{
+    height: 0px;
+    width: 17px;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0px 2px 0;
+    color: #87ceeb;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.rede-sociais .fa-instagram:hover{
+    color: #fff;
+    transform: translateY(9px);
+}
+.rede-sociais .fa-whatsapp{
+    height: 0px;
+    width: 17px;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0px 2px 0;
+    color: #87ceeb;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.rede-sociais .fa-whatsapp:hover{
+    color: #fff;
+    transform: translateY(-9px);
+}
+.rede-sociais .fa-twitter{
+    height: 0px;
+    width: 17px;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0px 2px 0;
+    color: #87ceeb;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.rede-sociais .fa-twitter:hover{
+    color: #fff;
+    transform: translateY(9px);
+}
+.texto-copy{
+    color:rgb(0, 0, 0);
+    text-align: center;
+    
+}
+/*Pagina de contacto*/
+.formulario {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: 600px;
+    left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.formulario .formBx{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formulario .formBx form{
+    position: relative;
+    width: 100%;
+    padding: 0 0 0 75px;
+}
+.formulario .formBx form h2{
+    color: rgb(26, 20, 20);
+    font-weight: 500;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+.formulario .formBx form .inputBox{
+    position: relative;
+    margin-bottom: 40px;
+}
+.formulario .formBx form .inputBox:last-child{
+    margin-bottom: 0px;
+}
+.formulario .formBx form .inputBox input,
+.formulario .formBx form .inputBox textarea{
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 100%;
+    color: black;
+    padding-bottom: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    resize: none;
+}
+.formulario .formBx form .inputBox textarea{
+    height: 100px;
+} 
+.formulario .formBx form .inputBox input[type="submit"]{
+    background: #fff;
+    padding: 8px 20px;
+    margin-top: -10px;
+    width: 120px;
+    cursor: pointer;
+    background:#c9bdbe;
+    color:black ;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+.formulario .formBx form .inputBox input[type="submit"]:focus{
+    background: #1bfaad;
+    color:#111;
+}
+.formulario .formBx form .inputBox span{
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+    display: inline-block;
+    pointer-events: none;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+}
+/*muda acor e mexe o texto de apoio*/
+.formulario .formBx form .inputBox input:focus ~ span,
+.formulario .formBx form .inputBox textarea:focus ~ span,
+.formulario .formBx form .inputBox input:valid ~ span,
+.formulario .formBx form .inputBox textarea:valid ~ span{
+    transform: translateY(-24px);
+    color:rgb(253, 253, 253);
+    font-size: 18px;
+}
+.formulario .formBx form .inputBox input:focus,
+.formulario .formBx form .inputBox textarea:focus,
+.formulario .formBx form .inputBox input:valid,
+.formulario .formBx form .inputBox textarea:valid {
+    border-bottom-color:black;
+}
+.formulario .imgCt{
+    position: relative;
+    width: 50%;  
+    height: 100%;
+    overflow: hidden;
+}
+.formulario .imgCt:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: #f0b397;*/
+    transform-origin: bottom;
+    transform: skewX(-25deg) translateX(10%);
+}
+.container .imgCt img {
+    position: absolute;
+    bottom: 0;
+    max-height: 95%;
+}
+#status{
+    width:10%;
+    max-width: 500px;
+    text-align: center;
+    padding: 0;
+    margin-left: 25px;
+    border-radius: 8px;
+   
+}
+#status.success{
+    background-color: #209715;
+    animation: status 4s ease forwards;
+}
+#status.error{
+    background-color: #ee0a0a;
+    color: rgb(15, 1, 1);
+    animation: status 4s ease  forwards;
+}
+@keyframes status{
+    0%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    90%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+/*tratamento dos botoes de compra*/
+
+.comprar{
+    position: relative;
+    display: block;
+    margin-top: 250px;
+    margin-left: 100px;
+    
+}
+
+.comprar .botao{
+    font-size: 10px;
+    background-color: #87ceeb;
+    box-sizing: border-box;
+    border-style: none;
+    border-radius: 5px;
+    width: 50px;
+    height: 20px;
+    
+}
+/*tratamento dos botoes da pag brincos*/
+
+.buttons{
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    margin-left: 100px;
+
+    
+}
+.price{
+    position: relative;
+    margin-top: 50px;
+    color: rgb(5, 148, 243);
+    font-size: 20px;
+
+}
+
+.button{
+    padding: 10px 0;
+    z-index: 11;
+    margin-left: 5px;
+    cursor: pointer;
+    outline: none;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 7px;
+    border-style: none;
+    background: linear-gradient(90deg, #f0b397,#550202);
+    color: #fff;
+   
+}
