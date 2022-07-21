@@ -124,7 +124,7 @@ main{
     align-items: center;
     flex-wrap: wrap;
     padding: 30px;
-    margin-left: 300px;
+    margin-left: 100px;
 }
 
 .container .card{
@@ -247,9 +247,15 @@ main{
     height: 100%;
     background: linear-gradient(90deg, rgb(126, 81, 81),rgb(175, 33, 33));
     position: relative;
+    align-items: center;
 }
 .fale-conosco a{
     text-decoration: none;
+    
+}
+.fale-conosco {
+    margin-left: 45px;
+
 }
 .contato{
     margin-left: 45px;
@@ -276,6 +282,7 @@ main{
 .rede-sociais{
     color: beige;
     align-items: center;
+    margin-left: 45px;
 }
 .rede-sociais .fa-facebook-f{
     height: 0px;
@@ -332,6 +339,7 @@ main{
 .rede-sociais .fa-twitter:hover{
     color: #fff;
     transform: translateY(9px);
+  
 }
 .texto-copy{
     color:rgb(0, 0, 0);
