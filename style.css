@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
 }
-
  
 a{
     color: #fff;
@@ -12,7 +11,6 @@ a{
 
 a:hover{
     opacity: 0.7;
-
 }
 
 .logo{
@@ -27,16 +25,13 @@ nav{
     justify-content: space-around;
     font-family:'Pattaya', sans-serif; 
     background-color: #23232e;
-    height: 8vh;
-    
+    height: 8vh;   
 }
-
 
 main{
     background: url("fundo.jpg") no-repeat center center;
     background-size: cover;
-    height: 92vh;
-
+    height: auto;
 }
 
 .nav-list{
@@ -61,62 +56,7 @@ main{
     margin: 8px;
     transition: 0.3s;
 }
-
-@media (max-width:999px) {
-    body {
-        overflow-x: hidden;
-    }
-.nav-list{
-    position: absolute;
-    top: 8vh;
-    left: 0;
-    width: 50vw;
-    height: 92vh;
-    background: #23232e;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transform: translateX(-100%);
-    transition: all 0.3s ease-in;
-}
-.nav-list li{
-    margin-right: 0;
-    
-    }
-     .mobile-menu{
-         display: block;
-     }
-}
-
-
-.nav-list.active{
-    transform: translate(0);
-}
-
-@keyframes navlinkFade {
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2 {
-    opacity: 0;
-}
-    
-.mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-}
-
-.container{
+.container {
     position: relative;
     width: 1100px;
     display: flex;
@@ -174,75 +114,6 @@ main{
     margin-top: -40px;
     transition-delay: 0.3s;
 }
-/* pagina pulseiras*/
-
-.pulseiras{
-    height: 100%;
-    background:linear-gradient(90deg, #f0b397,#550202);
-    
-}
-.album{
-    width: 1280px;
-    margin:0px auto 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.album .box{
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 20px;
-    box-sizing: border-box;
-    display: inline-block;
-    align-items: center;
-    left: 120px;
-
-}
-.album .box .imgBox{
-    position: relative;
-    overflow: hidden;
-}
-.album .box .imgBox img {
-    height: 300px;
-    width: 100%;
-    transition: transform 2s;
-}
-.album .box:hover .imgBox img{
-    transform: scale(1.2);
-}
-.album .box .detalhes{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0,0,0,0.5);
-    transform: scaleY(0);
-    transition: transform .5s;
-}
-.album .box:hover .detalhes{
-    transform: scaleY(1);
-}
-.album .box .detalhes .content{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    padding: 15px;
-    color: #fff;
-}
-.album .box .detalhes .content h2{
-    margin: 0;
-    margin: 0;
-    font-size: 20px;
-    color: #ff0;
-}
-.album .box .detalhes .content p{
-    margin: 10px 0 0;
-    padding: 0;
-} 
 .footer{
     height: 100%;
     background: linear-gradient(90deg, rgb(126, 81, 81),rgb(175, 33, 33));
@@ -254,17 +125,17 @@ main{
     
 }
 .fale-conosco {
-    margin-left: 45px;
+    margin-left: 230px;
 
 }
 .contato{
     margin-left: 45px;
 }
-.footer .container{
-    display: grid;
+.footer .down_page{
+    display: flex;
     grid-template-columns: repeat(4, 1fr);
 }
-.footer .container > div{
+.footer .down_page > div{
     flex-grow: 1;
     flex-basis: 0;
     padding: 3rem 0.9rem;
@@ -272,12 +143,14 @@ main{
 .footer h2{
     color: #fff;
 }
-.footer p{
+.sobre-nos p{
+    width: 150px;
     font-size: 15px;
     color: beige;
+    text-align: justify;
 }
-.footer .sobre-nos{
-    margin-left: 30px;
+.sobre-nos{
+    margin-left: 230px;
 }
 .rede-sociais{
     color: beige;
@@ -344,8 +217,147 @@ main{
 .texto-copy{
     color:rgb(0, 0, 0);
     text-align: center;
+    font-size: 18px;
     
 }
+@media (max-width:999px) {
+    body {
+        overflow-x: hidden;
+        height: auto;
+    }
+    .container{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 30px;
+        margin-left: 300px;
+    }
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232eab;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: all 0.3s ease-in;
+        z-index: 100;
+    }
+    .nav-list li{
+        margin-right: 0;
+        
+        }
+        .mobile-menu{
+            display: block;
+        }
+    }
+
+
+    .nav-list.active{
+        transform: translate(0);
+    }
+
+    @keyframes navlinkFade {
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+
+    .mobile-menu.active .line2 {
+        opacity: 0;
+    }
+        
+    .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+    .footer .down_page{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    /* pagina pulseiras*/
+
+    .pulseiras{
+        height: 100%;
+        background:linear-gradient(90deg, #f0b397,#550202);
+        
+    }
+    .album{
+        width: 1280px;
+        margin:0px auto 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .album .box{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+        box-sizing: border-box;
+        display: inline-block;
+        align-items: center;
+        left: 120px;
+
+    }
+    .album .box .imgBox{
+        position: relative;
+        overflow: hidden;
+    }
+.album .box .imgBox img {
+    height: 300px;
+    width: 100%;
+    transition: transform 2s;
+}
+.album .box:hover .imgBox img{
+    transform: scale(1.2);
+}
+.album .box .detalhes{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.5);
+    transform: scaleY(0);
+    transition: transform .5s;
+}
+.album .box:hover .detalhes{
+    transform: scaleY(1);
+}
+.album .box .detalhes .content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
+.album .box .detalhes .content h2{
+    margin: 0;
+    margin: 0;
+    font-size: 20px;
+    color: #ff0;
+}
+.album .box .detalhes .content p{
+    margin: 10px 0 0;
+    padding: 0;
+} 
+
 /*Pagina de contacto*/
 .formulario {
     position: relative;
@@ -507,8 +519,7 @@ main{
     position: relative;
     display: block;
     margin-top: 250px;
-    margin-left: 100px;
-    
+    margin-left: 100px;   
 }
 
 .comprar .botao{
@@ -518,8 +529,7 @@ main{
     border-style: none;
     border-radius: 5px;
     width: 50px;
-    height: 20px;
-    
+    height: 20px;    
 }
 /*tratamento dos botoes da pag brincos*/
 
@@ -527,16 +537,13 @@ main{
     position: relative;
     display: block;
     margin-top: 20px;
-    margin-left: 100px;
-
-    
+    margin-left: 100px;    
 }
 .price{
     position: relative;
     margin-top: 50px;
     color: rgb(5, 148, 243);
     font-size: 20px;
-
 }
 
 .button{
@@ -553,6 +560,8 @@ main{
     border-radius: 7px;
     border-style: none;
     background: linear-gradient(90deg, #f0b397,#550202);
-    color: #fff;
-   
+    color: #fff;  
+}
+@media (max-width:750px) {
+    
 }
